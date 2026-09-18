@@ -1,21 +1,46 @@
 # Color Folder (Plasma 6 port)
 
-A KDE Dolphin service menu for changing the colour of specific folders — compatible with **KDE Plasma 6**.
+A KDE Dolphin service menu for changing the colour of specific folders, but compatible with **KDE Plasma 6**.
 
 This is an unofficial port of [dfaust/kde-color-folder](https://github.com/dfaust/kde-color-folder), which supports KDE4 and Plasma 5. All original functionality is preserved; only the parts that broke under Plasma 6 have been updated.
+
+<!-- ==================================================================
+     SCREENSHOT PLACEHOLDER
+     Replace screenshot.png with a real capture (e.g. Dolphin's
+     right-click context menu showing the "Tint" submenu) and delete
+     this comment block. Keep the filename screenshot.png.
+     ================================================================== -->
+
+![Color Folder in Dolphin — right-click a folder and pick a colour from the Tint submenu](screenshots/example.jpg)
+
+---
+
+## Usage
+
+![Color Folder in Dolphin — right-click a folder and pick a colour from the Tint submenu](screenshots/menu.jpg)
+
+1. Open Dolphin and navigate to the folder whose colour you want to change.
+2. **Right-click the folder** and choose **Tint**.
+3. Pick one of the eleven colours: Red, Orange, Yellow, Green, Blue, Violet, Magenta, Brown, Cyan, Grey or Black. The folder icon changes colour immediately, however you may need to refresh the folder for it to show.
+4. To revert, right-click the folder again and choose **Tint → Remove color**. This restores the default folder icon.
+5. **Tint → Remove .directory file** deletes the hidden `.directory` file entirely, wiping any other view settings stored in it.
+
+Multiple folders can be coloured at once: select them all, right-click, and choose a colour.
+
+> **Note:** if the colour does not refresh straight away, press `F5` in the Dolphin view. Dolphin does not always re-read a folder's `.directory` file immediately after it is edited externally — this is a known Dolphin behaviour, not a fault of this service menu.
 
 ---
 
 ## What changed for Plasma 6
 
-| Area | Plasma 4/5 | Plasma 6 |
-|---|---|---|
-| **Service menu path** | `~/.local/share/kservices5/ServiceMenus/` | `~/.local/share/kio/servicemenus/` |
-| **System-wide path** | `/usr/share/kservices5/ServiceMenus/` | `/usr/share/kio/servicemenus/` |
-| **`.desktop` must be executable** | Not required | **Required** (security authorisation check) |
-| **Config tool** | `kf5-config` | `kf6-config` |
-| **Sycoca rebuild** | `kbuildsycoca5` | `kbuildsycoca6` |
-| **`ServiceTypes=` key** | `KonqPopupMenu/Plugin` | Removed; use `MimeType=inode/directory;` only |
+| Area                              | Plasma 4/5                                | Plasma 6                                      |
+| --------------------------------- | ----------------------------------------- | --------------------------------------------- |
+| **Service menu path**             | `~/.local/share/kservices5/ServiceMenus/` | `~/.local/share/kio/servicemenus/`            |
+| **System-wide path**              | `/usr/share/kservices5/ServiceMenus/`     | `/usr/share/kio/servicemenus/`                |
+| **`.desktop` must be executable** | Not required                              | **Required** (security authorisation check)   |
+| **Config tool**                   | `kf5-config`                              | `kf6-config`                                  |
+| **Sycoca rebuild**                | `kbuildsycoca5`                           | `kbuildsycoca6`                               |
+| **`ServiceTypes=` key**           | `KonqPopupMenu/Plugin`                    | Removed; use `MimeType=inode/directory;` only |
 
 The install/uninstall scripts detect which version of Plasma is running (`kf6-config` for Plasma 6, `kf5-config` for Plasma 5, with a hard-coded fallback) and handle both automatically, so this port is backwards-compatible with Plasma 5 as well.
 
@@ -75,12 +100,20 @@ The **Remove color** action comments out the `Icon=` line, restoring the default
 
 ## Requirements
 
-- KDE Plasma 6 / Dolphin 24.x
+- KDE Plasma 6 / Dolphin 24.x (Plasma 5 is also supported by the install scripts)
 - Breeze icon theme (or any icon theme that includes `folder-red`, `folder-green`, etc.)
 - `bash`
 
 ---
 
-## Licence
+## KDE Store
 
-GPL-2.0 — same as the original project.
+This service menu is published on the [KDE Store](https://store.kde.org/) in the **Dolphin Service Menus** category, which also makes it installable directly from within Dolphin via **Configure Dolphin → Context Menu → Download New Services**.
+
+---
+
+## Licence and credits
+
+- Original **Color Folder** for KDE4/Plasma 5 by Daniel Faust (hessijames@gmail.com), 2006–2018.
+- Plasma 6 port maintained separately; backwards-compatible with Plasma 5.
+- Licensed under the **GNU GPL-2.0** — see the [LICENSE](LICENSE) file.
