@@ -108,7 +108,7 @@ The **Remove color** action comments out the `Icon=` line, restoring the default
 
 ## KDE Store
 
-This service menu is published on the [KDE Store](https://store.kde.org/) in the **Dolphin Service Menus** category, which also makes it installable directly from within Dolphin via **Configure Dolphin → Context Menu → Download New Services**.
+This service menu is published on the [KDE Store](https://store.kde.org/p/2371875) in the **Dolphin Service Menus** category, which also makes it installable directly from within Dolphin via **Configure Dolphin → Context Menu → Download New Services**.
 
 ---
 
