@@ -1,5 +1,7 @@
 # Color Folder (Plasma 6 port)
 
+![](assets/banner.png)
+
 A KDE Dolphin service menu for changing the colour of specific folders, but compatible with **KDE Plasma 6**.
 
 This is an unofficial port of [dfaust/kde-color-folder](https://github.com/dfaust/kde-color-folder), which supports KDE4 and Plasma 5. All original functionality is preserved; only the parts that broke under Plasma 6 have been updated.
