@@ -48,6 +48,10 @@ The install/uninstall scripts detect which version of Plasma is running (`kf6-co
 
 ## Installation
 
+### Official KDE Store
+
+This service menu is published on the [KDE Store](https://store.kde.org/p/2371875) in the **Dolphin Service Menus** category, which also makes it installable directly from within Dolphin via **Configure Dolphin → Context Menu → Download New Services**.
+
 ### From source
 
 ```bash
@@ -103,12 +107,6 @@ The **Remove color** action comments out the `Icon=` line, restoring the default
 - KDE Plasma 6 / Dolphin 24.x (Plasma 5 is also supported by the install scripts)
 - Breeze icon theme (or any icon theme that includes `folder-red`, `folder-green`, etc.)
 - `bash`
-
----
-
-## KDE Store
-
-This service menu is published on the [KDE Store](https://store.kde.org/p/2371875) in the **Dolphin Service Menus** category, which also makes it installable directly from within Dolphin via **Configure Dolphin → Context Menu → Download New Services**.
 
 ---
 
